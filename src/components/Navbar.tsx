@@ -9,7 +9,7 @@ const Navbar = () => {
         <h5 className="text-sm font-light">Bienvenido!</h5>
       </div>
       <div className="flex items-center gap-5">
-        <div className="flex items-center border rounded-md py-3 px-4 text-md">
+        <div className="flex items-center border rounded-md py-3 px-4 text-md bg-white">
           <input type="text" name="" id="" placeholder="Buscar" className="outline-none" />
           <IoIosSearch />
         </div>

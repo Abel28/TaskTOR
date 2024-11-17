@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 
 const Sidebar = () => {
 
-    const selectedStyleItem = "text-blue-600 font-bold"
+    const selectedStyleItem = "text-blue-600 font-bold bg-gray-100 rounded-l-xl"
 
     const [selectedItem, setSelectedItem] = useState<string | null>(null);
 
@@ -17,14 +17,14 @@ const Sidebar = () => {
 
 
   return (
-    <div className="min-h-screen w-1/4 flex flex-col">
+    <div className="min-h-screen w-1/4 flex flex-col bg-white">
       <div className="flex ml-5 mt-10">
         <h1 className="text-2xl">Task</h1>
         <h1 className="text-2xl text-[#000B58] font-bold">TOR</h1>
       </div>
       <div className="flex flex-col mt-10 ml-5 gap-3 text-gray-900 font-medium">
         <Link
-          className={`flex items-center gap-4 text-md py-2 ${selectedItem === "dashboard" && selectedStyleItem }`}
+          className={`flex items-center gap-4 text-md py-2 pl-3 ${selectedItem === "dashboard" && selectedStyleItem }`}
           to={"/"}
           onClick={() => handleItemClick("dashboard")}
         >
@@ -32,7 +32,7 @@ const Sidebar = () => {
           <p>Dashboard</p>
         </Link>
         <Link
-          className={`flex items-center gap-4 text-md py-2 ${selectedItem === "tasks" && selectedStyleItem }`}
+          className={`flex items-center gap-4 text-md py-2 pl-3 ${selectedItem === "tasks" && selectedStyleItem }`}
           to="/tasks"
           onClick={() => handleItemClick("tasks")}
         >
@@ -40,7 +40,7 @@ const Sidebar = () => {
           <p>Tareas</p>
         </Link>
         <Link
-          className={`flex items-center gap-4 text-md py-2 ${selectedItem === "calendar" && selectedStyleItem }`}
+          className={`flex items-center gap-4 text-md py-2 pl-3 ${selectedItem === "calendar" && selectedStyleItem }`}
           to="/calendar"
           onClick={() => handleItemClick("calendar")}
         >
@@ -48,7 +48,7 @@ const Sidebar = () => {
           <p>Calendario</p>
         </Link>
         <a
-          className={`flex items-center gap-4 text-md py-2 ${selectedItem === "logout" && selectedStyleItem }`}
+          className={`flex items-center gap-4 text-md py-2 pl-3 ${selectedItem === "logout" && selectedStyleItem }`}
           href="#"
           onClick={() => handleItemClick("logout")}
         >
